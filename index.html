@@ -24,9 +24,12 @@
       <div id="quiz-scroll-area">
         <header>
           <h2 id="current-section-title"><span class="accent-bar"></span><span id="section-name-text"></span></h2>
-          <p id="progress-text"></p>
+          <div class="header-right">
+            <p id="progress-text"></p>
+            <input type="checkbox" id="review-checkbox" class="hidden">
+          </div>
         </header>
-
+        
         <div id="quiz-content">
           <div class="card question-card">
             <h3 class="question-number">問題 <span id="q-num"></span></h3>
@@ -36,11 +39,6 @@
           <div id="result-card" class="card hidden">
             <h3 id="result-title"></h3>
             <p id="explanation-text"></p>
-            <label id="mark-checkbox-label" class="mark-checkbox-label">
-              <input type="checkbox" id="mark-checkbox">
-              <span>この問題をチェックする</span>
-            </label>
-            <p id="sync-status" class="sync-status" aria-live="polite"></p>
           </div>
         </div>
       </div>
@@ -50,6 +48,7 @@
           <button id="btn-back-list" class="btn-secondary">問題一覧へ</button>
           <button id="btn-next-question" class="btn-primary">次の問題へ</button>
         </div>
+
         <div id="answer-buttons">
           <button id="btn-true" class="answer-btn btn-o">〇</button>
           <button id="btn-false" class="answer-btn btn-x">×</button>
@@ -57,6 +56,7 @@
       </div>
     </div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>

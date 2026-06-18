@@ -91,10 +91,23 @@ strong { font-weight: bold; color: #111; }
 }
 
 /* クイズ画面ヘッダー */
-#quiz-scroll-area header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: baseline; }
+#quiz-scroll-area header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
 #current-section-title { font-size: 1.2rem; display: flex; align-items: center; }
 .accent-bar { display: inline-block; width: 4px; height: 18px; background-color: var(--primary-color); margin-right: 8px; border-radius: 2px; }
 #progress-text { font-size: 0.9rem; color: var(--text-muted); font-weight: bold; }
+
+/* 右上の進捗テキストとチェックボックスの並びを設定 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#review-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
 
 /* クイズ内容 */
 .question-number { color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px; }
@@ -108,34 +121,6 @@ strong { font-weight: bold; color: #111; }
 #result-card.incorrect { background-color: var(--incorrect-bg); }
 #result-card.incorrect #result-title { color: var(--incorrect-text); }
 #explanation-text { text-align: left; font-size: 0.95rem; }
-
-.mark-checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(0,0,0,0.08);
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-  user-select: none;
-}
-.mark-checkbox-label input {
-  width: 22px;
-  height: 22px;
-  accent-color: var(--primary-color);
-  flex-shrink: 0;
-}
-.sync-status {
-  min-height: 1.2em;
-  margin-top: 8px;
-  color: var(--text-muted);
-  font-size: 0.82rem;
-  text-align: left;
-}
 
 /* 下部固定ボタンエリア */
 #bottom-controls {
